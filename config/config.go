@@ -19,13 +19,12 @@ func LoadConfig() {
 		log.Println("Error loading .env file, using default values")
 	}
 
-	config := &Config{
+	config := Config{
 		Port: getEnv("PORT", "8080"),
 	}
 
 
 	AppConfig = config
-	return config
 }
 
 func getEnv(key, defaultValue string) string {
