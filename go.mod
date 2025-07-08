@@ -1,4 +1,4 @@
-module voting-backend
+module github.com/emenesism/Decentralized-voting-backend
 
 go 1.24.3
 
