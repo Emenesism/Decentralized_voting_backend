@@ -8,7 +8,7 @@ import (
 )
 
 type ConfigS struct {
-    Port  string `env:"PORT" default:"8080"`
+    Port  int `env:"PORT" default:"8080"`
 	Host  string `env:"HOST" default:"localhost"`
 }
 
