@@ -1,36 +1,28 @@
-package config 
+package config
 
 import (
+	"context"
 	"log"
-	"os"
-
 	"github.com/joho/godotenv"
+	"github.com/sethvargo/go-envconfig"
 )
 
-
-type Config struct {
-	Port string
+type ConfigS struct {
+    Port  string `env:"PORT" default:"8080"`
 }
 
-var AppConfig Config
+var AppConfig ConfigS
 
-func LoadConfig() {
-	if err := godotenv.Load(); err != nil {
-		log.Println("Error loading .env file, using default values")
+func Init() {
+	ctx := context.Background()
+
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error on reading configuration from .env file", "error", err.Error())
 	}
 
-	config := Config{
-		Port: getEnv("PORT", "8080"),
+	err = envconfig.Process(ctx, &AppConfig)
+	if err != nil {
+		log.Fatal("Error on loading environment variables", "error", err.Error())
 	}
-
-
-	AppConfig = config
-}
-
-func getEnv(key, defaultValue string) string {
-	if value := os.Getenv(key); value != "" {
-		return value 
-	}
-
-	return defaultValue
 }
