@@ -10,6 +10,9 @@ import (
 type ConfigS struct {
     Port  int `env:"PORT" default:"8080"`
 	Host  string `env:"HOST" default:"localhost"`
+	Rpc_url string `env:"RPC_URL" default:"http://localhost:8545"`
+	Contract_address string `env:"CONTRACT_ADDRESS"`
+	Private_key string `env:"PRIVATE_KEY"`
 }
 
 var AppConfig ConfigS
