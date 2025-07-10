@@ -5,6 +5,7 @@ go 1.24.3
 require (
 	github.com/joho/godotenv v1.5.1
 	github.com/sethvargo/go-envconfig v1.3.0
+	gorm.io/gorm v1.30.0
 )
 
 require (
@@ -22,6 +23,8 @@ require (
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
 	github.com/mattn/go-runewidth v0.0.16 // indirect
 	github.com/muesli/termenv v0.16.0 // indirect
