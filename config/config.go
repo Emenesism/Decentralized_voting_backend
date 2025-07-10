@@ -13,6 +13,11 @@ type ConfigS struct {
 	Rpc_url string `env:"RPC_URL" default:"http://localhost:8545"`
 	Contract_address string `env:"CONTRACT_ADDRESS"`
 	Private_key string `env:"PRIVATE_KEY"`
+	DB_User string `env:"DB_User"`
+	DB_Passwd string `env:"DB_Passwd"`
+	DB_Host string `env:"DB_Host"`
+	DB_Port int `env:"DB_Port" default:"3306"`
+	DB_Name string `env:"DB_Name"`
 }
 
 var AppConfig ConfigS
