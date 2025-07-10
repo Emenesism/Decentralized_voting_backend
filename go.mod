@@ -3,6 +3,7 @@ module github.com/emenesism/Decentralized-voting-backend
 go 1.24.3
 
 require (
+	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/joho/godotenv v1.5.1
 	github.com/sethvargo/go-envconfig v1.3.0
 	gorm.io/gorm v1.30.0
