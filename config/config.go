@@ -18,6 +18,7 @@ type ConfigS struct {
 	DB_Host string `env:"DB_Host"`
 	DB_Port int `env:"DB_Port" default:"3306"`
 	DB_Name string `env:"DB_Name"`
+	Jwt_secret string `env:"JWT_SECRET" default:"test"`
 }
 
 var AppConfig ConfigS
