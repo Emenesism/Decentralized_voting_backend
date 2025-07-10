@@ -15,6 +15,8 @@ func NewRouter() *gin.Engine {
 	v1 := router.Group("v1")
 	{
 		v1.GET("health", controller.HealthCheck)
+		v1.GET("votes", controller.GetVotes)
+		v1.POST("vote", controller.Vote)	
 	}
 
 	return router
